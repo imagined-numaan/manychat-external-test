@@ -8,6 +8,7 @@ app.use(express.urlencoded({ extended: true}));
 app.post("/comment", (req, res) => {
   try {
     let text = undefined;
+    console.log(req.body)
     if (typeof req.body?.text === "string") {
       text = req.body.text;
     } else if (typeof req.query?.text === "string") {
