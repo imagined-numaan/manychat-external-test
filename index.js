@@ -9,7 +9,7 @@ app.post("/comment", (req, res) => {
   try {
     let text = undefined;
     console.log(req.body.leads)
-    console.log(req.body)
+    console.log(req.body.message)
     
     if (typeof req.body?.text === "string") {
       text = req.body.text;
