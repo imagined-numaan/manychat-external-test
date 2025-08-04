@@ -5,6 +5,8 @@ app.use(express.json());
 
 app.post("/comment", (req, res) => {
   const { text } = req.body;
+  console.log(req)
+  if (!req.body) return res.status(400).json({error: 'Request body must not be empty.'});
   if (typeof text !== "string") {
     return res
       .status(400)
